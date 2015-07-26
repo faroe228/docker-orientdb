@@ -8,20 +8,20 @@ Base image that exposes an [`orientdb`][orientdb] instance, in ports `2424` and
 To execute the image:
 
 ```bash
-docker run -d --name orientdb joaodubas/orientdb:latest
+docker run -d --name orientdb faroe228/docker-orientdb:latest
 ```
 
 It's also possible to redirect `orientdb` ports:
 
 ```bash
-docker run -d --name orientdb -p 2424:2424 -p 2480:2480 joaodubas/orientdb:latest
+docker run -d --name orientdb -p 2424:2424 -p 2480:2480 faroe228/docker-orientdb:latest
 ```
 
 To use another root password, redefine the environment variable
 `ORIENTDB_ROOT_PASSWORD`:
 
 ```bash
-docker run -d --name orientdb -e ORIENTDB_ROOT_PASSWORD=mysecurepassword joaodubas/orientdb:latest
+docker run -d --name orientdb -p 2424:2424 -p 2480:2480 -e ORIENTDB_ROOT_PASSWORD=admin faroe228/docker-orientdb:latest
 ```
 
 
